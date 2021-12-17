@@ -4,7 +4,8 @@
 }
 
 body{
-    background-color: #cad2c5;
+    /* background-color: #cad2c5; */
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +19,7 @@ body{
     background-color: #354f52;
     border-radius: 50%;
     position: relative;
-    box-shadow: #2f3e46 0px 30px 60px -12px, #2f3e46 0px 18px 36px -18px ;
+    box-shadow: #2f3e4620 0 0 10px 0.5rem, #2f3e46 0 0 10px 0.2rem ;
 }
 
 .clock .number{
