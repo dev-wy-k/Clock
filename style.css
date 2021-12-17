@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    font-size: 1.3rem;
+}
+
+body{
+    background-color: #cad2c5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.clock{
+    width: 300px;
+    height: 300px;
+    background-color: #354f52;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: #2f3e46 0px 30px 60px -12px, #2f3e46 0px 18px 36px -18px ;
+}
+
+.clock .number{
+    --rotation : 0 ;
+    padding: 5px;
+    color: #cad2c5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+.clock .number1{ --rotation : 30deg ; } 
+.clock .number2{ --rotation : 60deg ; } 
+.clock .number3{ --rotation : 90deg ; } 
+.clock .number4{ --rotation : 120deg ; } 
+.clock .number5{ --rotation : 150deg ; } 
+.clock .number6{ --rotation : 180deg ; } 
+.clock .number7{ --rotation : 210deg ; } 
+.clock .number8{ --rotation : 240deg ; } 
+.clock .number9{ --rotation : 270deg ; } 
+.clock .number10{ --rotation : 300deg ; } 
+.clock .number11{ --rotation : 330deg ; } 
+.clock .number12{ --rotation : 360deg ; } 
+
+.clock .hand{
+    --rotation : 0 ;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: black;
+    border: 1px solid #354f52;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 10;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg ));
+}
+
+.clock::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.clock .second-hand{
+    width: 3px;
+    height: 38%;
+    background-color: #ff595e;
+}
+.clock .minutes-hand{
+    width: 8px;
+    height: 35%;
+    background-color: black;
+}
+.clock .hour-hand{
+    width: 10px;
+    height: 25%;
+    background-color: black;
+}
+
